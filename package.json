@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "tsc": "tsc -p ./ --outDir ./.tmp",
-    "babel": "babel .tmp/index.js --out-file .tmp/index.babel.js",
-    "webpack": "webpack .tmp/index.babel.js dist/bundle.js",
+    "tsc": "tsc -p ./ --outDir ./.tmp/es6",
+    "babel": "babel .tmp/es6 --out-dir .tmp/es5",
+    "webpack": "webpack .tmp/es5/index.js dist/bundle.js",
     "build": "npm run tsc && npm run babel && npm run webpack",
     "clean": "rm -rf .tmp dist && mkdir dist"
   },
