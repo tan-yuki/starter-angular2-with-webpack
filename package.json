@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "tsc": "tsc -p ./ --outDir ./.tmp/es6",
-    "babel": "babel .tmp/es6 --out-dir .tmp/es5",
-    "webpack": "webpack .tmp/es5/index.js dist/bundle.js",
-    "build": "npm run tsc && npm run babel && npm run webpack",
-    "clean": "rm -rf .tmp dist && mkdir dist"
+    "webpack": "webpack  --progress --profile --colors --display-error-details --display-cached",
+    "build": "npm run webpack",
+    "clean": "rm -rf dist && mkdir dist"
   },
   "author": "",
   "license": "MIT",
@@ -22,7 +20,10 @@
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.6.5",
+    "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.6.0",
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.8.1",
     "typescript": "^1.8.9",
     "webpack": "^1.12.14"
   },
